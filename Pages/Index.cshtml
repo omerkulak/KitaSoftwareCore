@@ -1,0 +1,737 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Kıta Yazılım | Yazılım Hizmetleri</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="author" content="Kıta Yazılım">
+    <meta content="Grafik, Web, Tasarım, Grafik&Web Tasarım, Creative, Design, Tasarım, Pendik , İstanbul" name="keywords">
+    <meta content="Bireysel ve Kurumsal Grafik&Web Tasarım İhtiyacınıza Hızlı ve Ekonomik Çözümler Sunuyoruz.!" name="description">
+
+    <!-- Favicons -->
+    <link href="~/Assets/img/favicon.png" rel="icon">
+    <link href="~/Assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+    <link href="~/Assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Assets/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="~/Assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="~/Assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/Assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="~/Assets/css/style.css" rel="stylesheet">
+
+    <style>
+        section.pricing {
+          background: #007bff;
+          background: linear-gradient(to right, #0062E6, #33AEFF);
+        }
+
+        .pricing .card {
+          border: none;
+          border-radius: 0rem;
+          transition: all 0.2s;
+          box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing hr {
+          margin: 1.5rem 0;
+        }
+
+        .pricing .card-title {
+          margin: 0.5rem 0;
+          font-size: 0.9rem;
+          letter-spacing: .1rem;
+          font-weight: bold;
+        }
+
+        .pricing .card-price {
+          font-size: 3rem;
+          margin: 0;
+        }
+
+        .pricing .card-price .period {
+          font-size: 0.8rem;
+        }
+
+        .pricing ul li {
+          margin-bottom: 1rem;
+        }
+
+        .pricing .text-muted {
+          opacity: 0.7;
+        }
+
+        .pricing .btn {
+          font-size: 80%;
+          border-radius: 0rem;
+          letter-spacing: .1rem;
+          font-weight: bold;
+          padding: 1rem;
+          opacity: 0.7;
+          transition: all 0.2s;
+        }
+
+        /* Hover Effects on Card */
+
+        @@media (min-width: 992px) {
+          .pricing .card:hover {
+            margin-top: -.25rem;
+            margin-bottom: .25rem;
+            box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+          }
+          .pricing .card:hover .btn {
+            opacity: 1;
+          }
+        }
+
+    </style>
+
+    <!-- WhatsHelp.io widget -->
+    <script type="text/javascript">
+    (function () {
+        var options = {
+            whatsapp: "+905494020502", // WhatsApp numaranızı buraya girin
+            call_to_action: "Merhaba, nasıl yardımcı olabiliriz?", // Görünecek metin
+            position: "left", // Position may be 'right' or 'left'
+        };
+        var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+    </script>
+    <!-- /WhatsHelp.io widget -->
+
+</head>
+
+<body>
+    <header id="header" class="fixed-top">
+        <div class="container">
+
+            <div class="logo float-left">
+                <a href="@Url.Action("Index","Home")" class="scrollto"><img src="~/Assets/img/logo.png" alt="Kıta Yazılım" class="img-fluid"></a>
+            </div>
+
+            <nav class="main-nav float-right d-none d-lg-block">
+                <ul>
+                    <li class="active"><a href="#intro">Anasayfa</a></li>
+                    <li><a href="#about">Hakkımızda</a></li>
+                    <li><a href="#services">Hizmetlerimiz</a></li>
+                    <li><a href="#portfolio">Tasarımlarımız</a></li>
+                    <li><a href="#prices">Paketlerimiz</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <section id="intro" class="clearfix">
+        <div class="container">
+
+            <div class="intro-img">
+                <img src="~/Assets/img/intro-img.svg" alt="" class="img-fluid">
+            </div>
+
+            <div class="intro-info">
+                <h2>Kıta Yazılım<br>Hızlı Yazılım Çözümleri</h2>
+                <div>
+                    <a href="https://api.whatsapp.com/send?phone=905494020502" class="btn-services scrollto">Proje Başlat</a>
+                    <a href="#about" class="btn-services scrollto">Daha Fazlası</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <main id="main">
+
+
+        <section id="about">
+            <div class="container">
+
+                <header class="section-header">
+                    <h3>Kıta Yazılım Hakkında</h3>
+                    <p>"Hızlı Yazılım Çözümleri!"</p>
+                </header>
+
+                <div class="row about-container">
+
+                    <div class="col-lg-6 content order-lg-1 order-2">
+                        <p>
+                            Hakkımızda yazısı gelecek Hakkımızda yazısı gelecek Hakkımızda yazısı gelecek Hakkımızda yazısı gelecek Hakkımızda yazısı gelecek Hakkımızda yazısı gelecek Hakkımızda yazısı gelecek Hakkımızda yazısı gelecek Hakkımızda yazısı gelecek Hakkımızda yazısı gelecek Hakkımızda yazısı gelecek Hakkımızda yazısı gelecek Hakkımızda yazısı gelecek Hakkımızda yazısı gelecek Hakkımızda yazısı gelecek Hakkımızda yazısı gelecek Hakkımızda yazısı gelecek
+                        </p>
+
+                        <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="icon"><i class="fa fa-gift"></i></div>
+                            <h4 class="title"><a href="">Başlık</a></h4>
+                            <p class="description">Açıklama gelecek</p>
+                        </div>
+
+                        <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="icon"><i class="fa fa-bar-chart"></i></div>
+                            <h4 class="title"><a href="">Başlık</a></h4>
+                            <p class="description">açıklama gelecek</p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6 background order-lg-2 order-1 wow fadeInUp">
+                        <img src="~/Assets/img/hakkimizda.jpg" class="img-fluid" alt="mixizo hakkinda">
+                    </div>
+                </div>
+
+                <div class="row about-extra">
+                    <div class="col-lg-6 wow fadeInUp">
+                        <img src="~/Assets/img/canlidestek.jpg" class="img-fluid" alt="mixizo destek">
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
+                        <h4>Büyümek Problem Değil</h4>
+                        <p>
+                            Her firmanın alışılagelmiş rutinin dışına çıkması düşündürücü ve korkutucu olabilir.
+                        </p>
+                        <p>
+                            İşletmenizin yönetimini üstlenen uygulamalarınız artık ihtiyacı karşılamıyor olabilir. Bu noktada yazılım ekibimiz sizin için devreye giriyor. Titiz çalışmalar sonucu ihtiyacınız belirlenip her anlamda iş yükünüzü sırtlayacak uygulamaları geliştirmek için var gücümüz ile çalışıyoruz.
+                        </p>
+
+                        <p>
+                            Yeni nesil yazılım dilleri ile yazılan güçlü güvenli anlaşılabilir ve kolay arayüze sahip uygulamalara personelinizin adapte olması veya yeni uygulamaya geçiş dönemindeki entegrasyonlar artık bir problem değil.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="services" class="section-bg">
+            <div class="container">
+
+                <header class="section-header">
+                    <h3>Hizmetlerimiz</h3>
+                    <p>Kıta Yazılım Ne Yapar?</p>
+                </header>
+
+                <div class="row">
+
+                    <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
+                        <div class="box">
+                            <div class="icon"><i class="fa fa-code" style="color: #154274;"></i></div>
+                            <h4 class="title"><a href="">Yazılım</a></h4>
+                            <p class="description">Yenilikçi ekibimiz gelişmiş yazılım dilleri ile temiz kodlama, güvenli ve performanslı şekilde uygulamanızı inşa ediyor. </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-duration="1.4s">
+                        <div class="box">
+                            <div class="icon"><i class="fa fa-globe" style="color: #4680ff;"></i></div>
+                            <h4 class="title"><a href="">Web Uygulamaları</a></h4>
+                            <p class="description"> Artık web gözardı edilemez durumda. Tüm cihazlarla uyumlu (responsive) web uygulamalarınız işinizi kolaylaştırıyor.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+                        <div class="box">
+                            <div class="icon"><i class="fa fa-desktop" style="color: #006666;"></i></div>
+                            <h4 class="title"><a href="">Masaüstü Uygulamaları</a></h4>
+                            <p class="description">İşinizin vazgeçilmez bir parçası haline gelen uygulamalar ile  daha performanslı çalışıp zaman tasarrufu edin</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+                        <div class="box">
+                            <div class="icon"><i class="fa fa-language" style="color:#336699;"></i></div>
+                            <h4 class="title"><a href="">Çoklu Dil Seçeneği</a></h4>
+                            <p class="description">Global dünyada daha geniş kitlelere hitap edebilmeniz için çoklu dil desteğini sizlere sunuyoruz.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-5 offset-lg-1  wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+                        <div class="box">
+                            <div class="icon"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
+                            <h4 class="title"><a href="">Seo Yapılandırmaları</a></h4>
+                            <p class="description">Arama motorları için artık içeriğinizi gerekli modüller ile daha anlamlı hale getiriyoruz. Rekabet göz önünde olmanızı gerektiriyor.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+                        <div class="box">
+                            <div class="icon"><i class="fa fa-briefcase" style="color: #51BFE5;"></i></div>
+                            <h4 class="title"><a href="">Destek</a></h4>
+                            <p class="description">Uygulama konusunda profesyonel ekibimiz ve desteği ile her zaman ve en kısa sürede sizinleyiz.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </section>
+
+
+        <section id="why-us" class="wow fadeIn">
+            <div class="container">
+                <header class="section-header">
+                    <h3>Neden Kıta Yazılım?</h3>
+                    <p></p>
+                </header>
+
+                <div class="row row-eq-height justify-content-center">
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card wow bounceInUp">
+                            <i class="fa fa-reply-all"></i>
+                            <div class="card-body">
+                                <h5 class="card-title">Yenilikçi</h5>
+                                <p class="card-text">Gelişmiş ve güncel yazılım dillerini kullanıyoruz. Kullanımı kolay ve Responsive arayüzler ile işinizi kolaylaştırıyoruz.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card wow bounceInUp">
+                            <i class="fa fa-pencil"></i>
+                            <div class="card-body">
+                                <h5 class="card-title">Özgün</h5>
+                                <p class="card-text">Tamamen size özel olarak hazırlanmış ve gelişmiş modüllerle de güçlendirilmiş sistem ile içerikleri yönetmek artık sizin elinizde. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card wow bounceInUp">
+                            <i class="fa fa-commenting"></i>
+                            <div class="card-body">
+                                <h5 class="card-title">Hızlı</h5>
+                                <p class="card-text">Bizim için hız sadece uygulamanın performansından ibaret değil. Kurulum sonrası hizmet ve desteğimiz ile yanınızdayız.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="portfolio" class="section-bg">
+            <div class="container">
+
+                <header class="section-header">
+                    <h3 class="section-title">Tasarımlarımız</h3>
+                </header>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul id="portfolio-flters">
+                            <li data-filter="*" class="filter-active">All</li>
+                            <li data-filter=".filter-grafik">Grafik</li>
+                            <li data-filter=".filter-web">Web</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row portfolio-container">
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-grafik">
+                        <div class="portfolio-wrap">
+                            <img src="~/Assets/img/portfolio/grafik1.jpg" class="img-fluid" alt="mixizo grafik tasarim">
+                            <div class="portfolio-info">
+                                <h4><a href="#">Metin Izgara</a></h4>
+                                <p>Grafik</p>
+                                <div>
+                                    <a href="~/Assets/img/portfolio/grafik1.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
+                        <div class="portfolio-wrap">
+                            <img src="~/Assets/img/portfolio/web1.jpg" class="img-fluid" alt="mixizo web tasarim">
+                            <div class="portfolio-info">
+                                <h4><a href="#">www.alelmaservis.com.tr</a></h4>
+                                <p>Web</p>
+                                <div>
+                                    <a href="~/Assets/img/portfolio/web1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.2s">
+                        <div class="portfolio-wrap">
+                            <img src="~/Assets/img/portfolio/web2.jpg" class="img-fluid" alt="mixizo web tasarim">
+                            <div class="portfolio-info">
+                                <h4><a href="#">www.hanedentarim.com</a></h4>
+                                <p>Web</p>
+                                <div>
+                                    <a href="~/Assets/img/portfolio/web2.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-grafik">
+                        <div class="portfolio-wrap">
+                            <img src="~/Assets/img/portfolio/grafik2.jpg" class="img-fluid" alt="mixizo grafik tasarim">
+                            <div class="portfolio-info">
+                                <h4><a href="#">NordicVK</a></h4>
+                                <p>Grafik</p>
+                                <div>
+                                    <a href="~/Assets/img/portfolio/grafik2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-grafik" data-wow-delay="0.1s">
+                        <div class="portfolio-wrap">
+                            <img src="~/Assets/img/portfolio/grafik3.jpg" class="img-fluid" alt="mixizo grafik tasarim">
+                            <div class="portfolio-info">
+                                <h4><a href="#">Fidex Performance</a></h4>
+                                <p>Grafik</p>
+                                <div>
+                                    <a href="~/Assets/img/portfolio/grafik3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-grafik" data-wow-delay="0.2s">
+                        <div class="portfolio-wrap">
+                            <img src="~/Assets/img/portfolio/grafik4.jpg" class="img-fluid" alt="mixizo grafik tasarim">
+                            <div class="portfolio-info">
+                                <h4><a href="#">Müfit Tarakçı</a></h4>
+                                <p>Grafik</p>
+                                <div>
+                                    <a href="~/Assets/img/portfolio/grafik4.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-grafik" data-wow-delay="0.2s">
+                        <div class="portfolio-wrap">
+                            <img src="~/Assets/img/portfolio/grafik5.jpg" class="img-fluid" alt="mixizo grafik tasarim">
+                            <div class="portfolio-info">
+                                <h4><a href="#">Turuncu Servis</a></h4>
+                                <p>Grafik</p>
+                                <div>
+                                    <a href="~/Assets/img/portfolio/grafik5.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
+
+        <section id="prices" class="pricing py-5 wow fadeIn">
+            <div class="container">
+                <div class="row">
+                    <!-- Free Tier -->
+                    <div class="col-lg-4  wow bounceInUp">
+                        <div class="card mb-5 mb-lg-0">
+                            <div class="card-body">
+                                <h5 class="card-title text-muted text-uppercase text-center">Başlangıç Paketi</h5>
+                                <h6 class="card-price text-center">$0<span class="period">/Ay</span></h6>
+                                <hr>
+                                <ul class="fa-ul">
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Single User</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>5GB Storage</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Unlimited Public Projects</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Community Access</li>
+                                    <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Unlimited Private Projects</li>
+                                    <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Dedicated Phone Support</li>
+                                    <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Free Subdomain</li>
+                                    <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Monthly Status Reports</li>
+                                </ul>
+                                <a href="#" class="btn btn-block btn-primary text-uppercase">Detay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Plus Tier -->
+                    <div class="col-lg-4  wow bounceInUp">
+                        <div class="card mb-5 mb-lg-0">
+                            <div class="card-body">
+                                <h5 class="card-title text-muted text-uppercase text-center">Plus</h5>
+                                <h6 class="card-price text-center">$9<span class="period">/Ay</span></h6>
+                                <hr>
+                                <ul class="fa-ul">
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span><strong>5 Users</strong></li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>50GB Storage</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Unlimited Public Projects</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Community Access</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Unlimited Private Projects</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Dedicated Phone Support</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Free Subdomain</li>
+                                    <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li>
+                                </ul>
+                                <a href="#" class="btn btn-block btn-primary text-uppercase">Detay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pro Tier -->
+                    <div class="col-lg-4  wow bounceInUp">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
+                                <h6 class="card-price text-center">$49<span class="period">/Ay</span></h6>
+                                <hr>
+                                <ul class="fa-ul">
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span><strong>Unlimited Users</strong></li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>150GB Storage</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Unlimited Public Projects</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Community Access</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Unlimited Private Projects</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Dedicated Phone Support</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span><strong>Unlimited</strong> Free Subdomains</li>
+                                    <li><span class="fa-li"><i class="fa fa-check"></i></span>Monthly Status Reports</li>
+                                </ul>
+                                <a href="#" class="btn btn-block btn-primary text-uppercase">Detay</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contact">
+            <div class="container-fluid">
+
+                <div class="section-header">
+                    <h3>İletişim</h3>
+                </div>
+
+                <div class="row wow fadeInUp">
+
+                    <div class="col-lg-6">
+                        <div class="map mb-4 mb-lg-0">
+                            <iframe style="width:100%" height="400" src="https://maps.google.com/maps?width=400&amp;height=440&amp;hl=en&amp;q=Esentepe%20Mah%20Ilgaz%20Sok.%20No%3A37%2FA%2034394%20KARTAL%2F%C4%B0STANBUL+(Alelma%20Servis)&amp;ie=UTF8&amp;t=&amp;z=16&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+
+                            @*<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1507.595772753853!2d29.29304580002834!3d40.91154585015192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cada4c243846d7%3A0x48d5e70dd5cd867!2zS3VydGvDtnksIMOcc3TDvG4gQ2QuIE5vOjIzLCAzNDkxMiBQZW5kaWsvxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1573674293808!5m2!1str!2str" frameborder="0" style="border:0; width: 100%; height: 312px;" allowfullscreen></iframe>*@
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-md-5 info">
+                                <i class="ion-ios-location-outline"></i>
+                                <p>Esentepe Mahallesi Ilgaz Sokak NO:37/A Kartal/İstanbul</p>
+                            </div>
+                            <div class="col-md-4 info">
+                                <i class="ion-ios-email-outline"></i>
+                                <p><a href="mailto:info@kitayazilim.com">info@kitayazilim.com</a></p>
+                            </div>
+                            <div class="col-md-3 info">
+                                <i class="ion-ios-telephone-outline"></i>
+                                <p><a href="tel:+905494020502">0 549 402 0502</a></p>
+                            </div>
+                        </div>
+
+                        <div class="form">
+                            <span id="uyari"></span>
+                            <form action="" method="post" id="mailForm" role="form" class="contactForm">
+                                <div class="form-row">
+                                    <div class="form-group col-lg-6">
+                                        <input type="text" name="name" class="form-control" id="name" placeholder="Ad Soyad" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                        <span id="nameerror" style="color:red"></span>
+                                    </div>
+                                    <div class="form-group col-lg-6">
+                                        <input type="email" class="form-control" name="mail" id="mail" placeholder="E-Posta" data-rule="email" data-msg="Lütfen geçerli bir mail adresi girin" />
+                                        <span id="mailerror" style="color:red"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Konu" data-rule="minlen:4" data-msg="Lütfen geçerli bir telefon numarası girin" />
+                                    <div class="validation"></div>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" name="message" id="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mesajınız"></textarea>
+                                    <div class="validation"></div>
+                                </div>
+                                <div class="text-center"><button type="submit" id="send" title="Send Message">Mesajı İlet</button></div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-6 footer-info">
+                        <h3>KITA YAZILIM</h3>
+                        <p>hakkımızda yazısı gelecek</p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Hızlı Menü</h4>
+                        <ul>
+                            <li><a href="#intro" class="scrollto">Anasayfa</a></li>
+                            <li><a href="#about" class="scrollto">Hakkımızda</a></li>
+                            <li><a href="#services" class="scrollto">Hizmetlerimiz</a></li>
+                            <li><a href="#portfolio" class="scrollto">Tasarımlarımız</a></li>
+                            <li><a href="#prices" class="scrollto">Paketlerimiz</a></li>
+                            <li><a href="#contact" class="scrollto">İletişim</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h4>İletişim</h4>
+                        <p>
+                            Esentepe Mahallesi <br />
+                            Ilgaz Sokak NO:37/A <br />
+                            Kartal/İstanbul<br />
+                            <strong>Tel:</strong> <a href="tel:+905494020502"> 0(549) 402 0502</a><br>
+                            <strong>Email:</strong><a href="mailto:info@kitayazilim.com"> info@kitayazilim.com</a><br>
+                        </p>
+
+                        @*<div class="social-links">
+                            <a href="https://www.mixizo.com" class="web"><i class="fa fa-globe"></i></a>
+                            <a href="https://instagram.com/mixizo_com" class="instagram"><i class="fa fa-instagram"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=905434226782" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
+                        </div>*@
+
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-newsletter">
+                        <h4>İndirimleri Kaçırma!</h4>
+                        <p>Kampanyalardan haberdar olmak için Abone Ol!</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="Abone Ol">
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong>Kıta Yazılım</strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                Designed by <a href="https://mixizo.com/">Mixizo</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/Assets/lib/jquery/jquery.min.js"></script>
+    <script src="~/Assets/lib/jquery/jquery-migrate.min.js"></script>
+    <script src="~/Assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Assets/lib/easing/easing.min.js"></script>
+    <script src="~/Assets/lib/mobile-nav/mobile-nav.js"></script>
+    <script src="~/Assets/lib/wow/wow.min.js"></script>
+    <script src="~/Assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="~/Assets/lib/counterup/counterup.min.js"></script>
+    <script src="~/Assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="~/Assets/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="~/Assets/lib/lightbox/js/lightbox.min.js"></script>
+
+    <script src="~/Assets/contactform/contactform.js"></script>
+
+
+    <script src="~/Assets/js/main.js"></script>
+    <script>
+        //Mesaj gönderme bölümü ajax ile yazıldı. Mesaj modülü kod başlangıcı
+
+        $(document).ready(function () {
+            $("#send").click(function () {
+                var namefield = $("#name").val();
+                var mailfield = $("#mail").val();
+
+                $("#send").html('<span>Gönderiliyor...</span>');
+                $("#send").attr("disabled", true);
+                var data = $("#mailForm").serialize();
+                $.ajax({
+                    type: "POST",
+                    url: "/Home/SendMail",
+                    data: data,
+                    success: function (response) {
+                        //mesaj hatasız gönderildiğinde yapılacak işlemler. buton text değişimleri vs
+                        $("#uyari").css("color", "green");
+                        $("#send").html('<span><i style="margin-right:3px" class="fa fa-check-circle" style="font-size:18px; margin-top:0px"></i> Gönderildi</span>');
+                        $("#send").attr("disabled", false);
+                        $("#uyari").text("Mesajınız başarıyla gönderildi");
+                        $("#name").val("");
+                        $("#mail").val("");
+                        $("#subject").val("");
+                        $("#message").val("");
+                    },
+                    error: function (request, status, error) {
+                        //mesaj gönderiminde hata oluştuğunda yapılacak işlemler. buton text değişimleri vs
+                        $("#uyari").css("color", "red");
+
+                        if (namefield == "") {
+                            $("#nameerror").text("Ad alanı zorunludur");
+                        }
+                        if (mailfield == "") {
+                            $("#mailerror").text("Mail alanı zorunludur");
+                        }
+                        $("#send").html('<span><i style="margin-right:3px" class="fa fa-exclamation-triangle" style="font-size:18px; margin-top:0px"></i> Hata Oluştu</span>');
+                        $("#send").attr("disabled", false);
+                        if (namefield != "" && mailfield != "") {
+                            $("#uyari").text("Hata oluştu! lütfen telefon ile ulaşmayı deneyiniz");
+                        }
+                    }
+                })
+            })
+            //mesaj bölümü kod bitişi
+        })
+
+        $("#name").keyup(function () {
+            //bilgi girildiğinde button yazısı değişmesi için
+            if ($("#name").val().length > 0) {
+                $("#nameerror").text("");
+            } else {
+                $("#nameerror").text("Ad alanı zorunludur");
+            }            
+            duzelt();
+        })
+        $("#mail").keyup(function () {
+             if ($("#mail").val().length > 0) {
+                $("#mailerror").text("");
+            } else {
+                $("#mailerror").text("Ad alanı zorunludur");
+            }
+            
+            duzelt();
+
+        })
+
+        function duzelt() {
+            var namearea = $("#name").val();
+            var mailarea = $("#mail").val();
+            debugger
+            if (namearea != "" && mailarea != "") {
+
+                $("#send").html('<span>Mesajı İlet</span>');
+            }
+        }
+
+    </script>
+</body>
+</html>
+
